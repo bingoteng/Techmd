@@ -3,8 +3,6 @@
 ```bash
 #查看版本号：验证安装
 git --version
-
-
 ```
 
 
@@ -36,6 +34,7 @@ git branch -r
 
 git brach -v
 
+git branch -d
 # 删除本地分支（仅本地，远程分支不受影响）
 git branch -D my_debug_note
 
@@ -47,13 +46,13 @@ git branch -D my_debug_note
 #初始化当前文件夹为git仓库
 git init
 
-#暂存所有改动
-git add
+#暂存当前文件夹的所有改动
+git add  .
 
 #提交一次版本到本地仓库
 git commit -m "备注：本次提交标识"
 
-#
+#查看仓库状态
 git status
 ```
 
@@ -88,7 +87,9 @@ git push
 git push -u origin wb_test
 
 #首次推送/后续推送？
-
+git remote add origin https://github.com/bingoteng/test.git
+#输入远程仓库名
+#个人密钥
 #拉取
 git pull
 
@@ -103,6 +104,8 @@ git diff
 ```bash
 #克隆远程分支到当前文件夹
 git clone
+
+#本地没有 Git 仓库，这时我们可以直接将远程仓库clone到本地。通过clone命令创建的本地仓库，其本身就是一个 Git 仓库了，不用我们再进行init初始化操作啦，而且自动关联远程仓库。我们只需要在这个仓库进行修改或者添加等操作，然后commit即可
 
 # 克隆公司主干代码到本地（拿到完整工程）
 git clone git@公司git地址:项目.git
@@ -128,15 +131,30 @@ git stash pop
 
 
 
+```bash
+#打印仓库提交日志
+git log 
+
+q退出
+'space'下一页
 ```
 
+
+
+
+
+```bash
+#切换到main分支，将wb_best分支合并到main分支
+git merge wb_test
+
 ```
-
-
 
 ```
 SSH地址配置
 
+ssh key 
+
+github->settings->SSH and GPG keys->New SSH keys->crtl +v
 ```
 
 
