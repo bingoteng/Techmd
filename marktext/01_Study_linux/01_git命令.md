@@ -5,8 +5,6 @@
 git --version
 ```
 
-
-
 ```bash
 # 设置全局用户名（你的GitHub/Gitee昵称）
 git config --global user.name "window"
@@ -40,8 +38,6 @@ git branch -D my_debug_note
 
 ```
 
-
-
 ```bash
 #初始化当前文件夹为git仓库
 git init
@@ -55,8 +51,6 @@ git commit -m "备注：本次提交标识"
 #查看仓库状态
 git status
 ```
-
-
 
 ```bash
 #查看当前文件夹绑定的所有远程仓库
@@ -78,8 +72,6 @@ git remote rm personal
 git push origin --delete wb_best
 ```
 
-
-
 ```bash
 #推送
 git push
@@ -96,10 +88,6 @@ git pull
 git fetch 
 git diff
 ```
-
-
-
-
 
 ```bash
 #克隆远程分支到当前文件夹
@@ -118,8 +106,6 @@ git checkout -b my_debug
 
 ```
 
-
-
 ```bash
 # 暂存当前未提交的所有修改，分支不变
 git stash save "临时保存调试注释，未完成"
@@ -129,8 +115,6 @@ git stash list
 git stash pop
 ```
 
-
-
 ```bash
 #打印仓库提交日志
 git log 
@@ -138,10 +122,6 @@ git log
 q退出
 'space'下一页
 ```
-
-
-
-
 
 ```bash
 #切换到main分支，将wb_best分支合并到main分支
@@ -157,6 +137,7 @@ ssh key
 github->settings->SSH and GPG keys->New SSH keys->crtl +v
 ```
 
-
 首次http推送
 ![image-20260723004456645](https://cdn.jsdelivr.net/gh/bingoteng/Photos/Typora/20260723_00-45_ab68e180d103b309215c38dc19f12bde.png)
+
+<u></u> 
