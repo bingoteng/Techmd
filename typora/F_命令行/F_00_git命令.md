@@ -12,14 +12,14 @@ git config --list
 
 已有的关键配置项说明：
 
-| 配置项                      | 作用                                                         |
-| --------------------------- | ------------------------------------------------------------ |
-| `user.name`、`user.email`   | 提交代码的身份标识，每条提交都会附带该信息                   |
+| 配置项                         | 作用                                               |
+| --------------------------- | ------------------------------------------------ |
+| `user.name`、`user.email`    | 提交代码的身份标识，每条提交都会附带该信息                            |
 | `core.autocrlf=true`        | Windows自动做换行转换：拉取文件转为Windows的CRLF换行，提交仓库统一存储LF换行 |
-| `core.quotepath=false`      | 终端正常展示中文文件名，不会转义成`\xxx`编码                 |
-| `core.longpaths=true`       | 解除Windows 260字符路径长度限制，适配深层级笔记目录          |
-| `init.defaultbranch=main`   | 新建仓库默认主分支为main，不用老旧的master                   |
-| `credential.helper=manager` | Windows凭据管理器缓存账号密码，HTTPS推送无需重复输入账号密码 |
+| `core.quotepath=false`      | 终端正常展示中文文件名，不会转义成`\xxx`编码                        |
+| `core.longpaths=true`       | 解除Windows 260字符路径长度限制，适配深层级笔记目录                  |
+| `init.defaultbranch=main`   | 新建仓库默认主分支为main，不用老旧的master                       |
+| `credential.helper=manager` | Windows凭据管理器缓存账号密码，HTTPS推送无需重复输入账号密码             |
 
 ### 2. 修改提交用户名（配置身份）
 
@@ -156,26 +156,26 @@ git config --global --unset https.proxy
 > 前提：电脑已完成user.name/user.email、换行、中文路径、长路径等全局配置，无需重复配置
 
 1. 进入存放笔记的本地根目录
-
+   
    ```
    cd D:/Typora_notes/Notes
    ```
 
 2. 初始化本地Git仓库（仅第一次新建文件夹执行）
-
+   
    ```
    git init
    ```
 
 3. 创建统一收纳文件夹，收拢所有零散笔记目录
-
+   
    ```
    mkdir typora
    git mv A* B* C* D* E* X* Y* Z* typora/
    ```
 
 4. 关联GitHub远程仓库（仅首次绑定执行）
-
+   
    ```
    git remote add origin git@github.com:bingoteng/Techmd.git
    # 校验远程是否绑定成功
@@ -183,25 +183,25 @@ git config --global --unset https.proxy
    ```
 
 5. 抓取目录下全部文件加入暂存区
-
+   
    ```
    git add .
    ```
 
 6. 提交本次文件变更，填写备注
-
+   
    ```
    git commit -m "整理嵌入式全套笔记，统一归入typora目录"
    ```
 
 7. 拉取远程仓库内容，合并两边无关提交历史（仅首次推送执行）
-
+   
    ```
    git pull origin main --allow-unrelated-histories
    ```
 
 8. 首次推送并绑定本地与远程分支关联
-
+   
    ```
    git push -u origin main
    ```
@@ -211,19 +211,19 @@ git config --global --unset https.proxy
 1. 修改本地md笔记文件
 
 2. 缓存变更文件
-
+   
    ```
    git add .
    ```
 
 3. 提交更新记录
-
+   
    ```
    git commit -m "更新XX八股文/项目文档知识点"
    ```
 
 4. 同步到远程GitHub仓库
-
+   
    ```
    git push
    ```
@@ -231,20 +231,20 @@ git config --global --unset https.proxy
 ## 配套踩坑应急操作（工作流异常时使用）
 
 1. HTTPS推送报连接重置：切换SSH远程地址
-
+   
    ```
    git remote set-url origin git@github.com:bingoteng/Techmd.git
    ```
 
 2. 推送提示rejected、需要先拉取
-
+   
    ```
    git pull origin main
    git push
    ```
 
 3. 误删.git文件夹，重建仓库上传
-
+   
    ```
    git init
    git remote add origin git@github.com:bingoteng/Techmd.git
@@ -252,3 +252,5 @@ git config --global --unset https.proxy
    git commit -m "重建笔记仓库"
    git push -u origin main -f
    ```
+
+# 
