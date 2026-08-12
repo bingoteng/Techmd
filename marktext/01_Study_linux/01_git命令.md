@@ -141,3 +141,12 @@ github->settings->SSH and GPG keys->New SSH keys->crtl +v
 ![image-20260723004456645](https://cdn.jsdelivr.net/gh/bingoteng/Photos/Typora/20260723_00-45_ab68e180d103b309215c38dc19f12bde.png)
 
 <u></u> 
+
+```
+hui tui
+git checkout <commit 哈希>
+
+git checkout ace2fc77adf6caacd584c1929ba0bc637e1f6f4f
+
+```
+
