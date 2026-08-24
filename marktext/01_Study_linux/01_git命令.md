@@ -143,7 +143,7 @@ github->settings->SSH and GPG keys->New SSH keys->crtl +v
 <u></u> 
 
 ```
-hui tui
+回退到某个版本
 git checkout <commit 哈希>
 
 git checkout ace2fc77adf6caacd584c1929ba0bc637e1f6f4f
