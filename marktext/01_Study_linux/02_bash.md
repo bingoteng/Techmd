@@ -1,3 +1,5 @@
+## 1.解压命令
+
 在 Linux 中解压 `.tar` 文件，最常用的命令是：
 
 ```bash
@@ -21,3 +23,13 @@ tar -xvf filename.tar
 | `.tar.zst`         | `tar --zstd -xvf file.tar.zst` | 使用 zstd 压缩         |
 
 > **💡 提示：** 较新版本的 GNU tar（通常 Linux 发行版自带）可以自动识别压缩格式，直接运行 `tar -xvf filename.tar.*` 即可，无需手动指定 `-z`、`-j`
+
+
+
+## 2.arch linux pacman命令
+
+```bash
+pacman -Qs wechat
+#确认
+```
+
